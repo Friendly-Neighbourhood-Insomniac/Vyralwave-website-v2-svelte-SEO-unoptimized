@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #1E1B3A;
+  --color-accent-blue: #00E5FF;
+  --color-accent-magenta: #FF2D9E;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+body {
+  @apply bg-[#1E1B3A] text-white font-sans antialiased overflow-x-hidden;
+}
+
+.neon-glow {
+  filter: drop-shadow(0 0 10px var(--color-accent-blue));
+}
+
+.neon-glow-magenta {
+  filter: drop-shadow(0 0 10px var(--color-accent-magenta));
+}
+
+.btn {
+  @apply px-4 sm:px-6 py-2 sm:py-3 rounded-full font-medium transition-all duration-300 text-sm sm:text-base;
+}
+
+.btn-primary {
+  @apply bg-[#00E5FF] text-[#1E1B3A] hover:bg-[#FF2D9E] neon-glow;
+}
+
+.section {
+  @apply min-h-screen flex items-center justify-center py-20 px-4 md:px-8;
+  scroll-margin-top: 5rem;
+}
